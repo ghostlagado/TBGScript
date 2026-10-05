@@ -14,7 +14,7 @@ const wl = new Wordlist(rl)
 
 const modules = [
   { nome: "Brute Force Module", type: "Brute Force - Login (Generic)", command: "brt", exec: async () => tryLogin(rl) },
-  { nome: "Action Realizer - UCT", type: "Login and make courses by URL", command: "uct", exec: async () => courses.main() },
+  // { nome: "Action Realizer - UCT", type: "Login and make courses by URL", command: "uct", exec: async () => courses.main() },
   { nome: "Wordlist generator", type: "Create a personalized wordlist", command: "gen", exec: async () => wl.create() },
   { nome: "CPF - Wordlist generator", type: "Create a wordlist with numbers of CPFS(IDS)", command: "gen -c", exec: async () => c.module() },
 ];
