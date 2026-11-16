@@ -5,6 +5,7 @@ import figlet from 'figlet';
 import { tryLogin } from './models/tryLogin.js';
 import { Courses } from './models/courses.js'
 import { CPF, Wordlist } from './models/generator.js'
+import { scan } from './models/scanner.js'
 
 const rl = readline.createInterface({ input, output });
 const banner = figlet.textSync("TBG Script", { font: "3D-ASCII" });
@@ -17,6 +18,7 @@ const modules = [
   // { nome: "Action Realizer - UCT", type: "Login and make courses by URL", command: "uct", exec: async () => courses.main() },
   { nome: "Wordlist generator", type: "Create a personalized wordlist", command: "gen", exec: async () => wl.create() },
   { nome: "CPF - Wordlist generator", type: "Create a wordlist with numbers of CPFS(IDS)", command: "gen -c", exec: async () => c.module() },
+  { nome: "Port Scanner", type: "Scan ports of a Host or Ip", command: "scan", exec: async () => scan(rl) },
 ];
 
 function normalizarComando(command) {
